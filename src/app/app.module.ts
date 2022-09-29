@@ -11,6 +11,6 @@ import { ComponentList } from './component-List/component-list.component';
   declarations: [AppComponent, ComponentList, ComponentInput],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent, ComponentList, ComponentInput],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

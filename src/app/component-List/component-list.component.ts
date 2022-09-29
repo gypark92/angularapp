@@ -1,15 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
 import { ListService } from './list.service';
 
 @Component({
   selector: 'app-component-list',
   templateUrl: './component-list.component.html',
   styleUrls: ['../app.component.css'],
-  providers: [ListService],
+  // providers: [ListService],
 })
 export class ComponentList {
-  items: string[];
-  constructor(listService: ListService) {
-    this.items = listService.getItem();
+  @Input() data!: string[];
+  @Input() data2!: string;
+
+  constructor() {
+    // listService: ListService
+    // this.items = listService.getItem();
   }
 }

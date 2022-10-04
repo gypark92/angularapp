@@ -10,7 +10,6 @@ import { ListService } from './list.service';
 })
 export class ComponentList {
   @Input() data!: string[];
-  @Input() data2!: string;
 
   constructor() {
     // listService: ListService

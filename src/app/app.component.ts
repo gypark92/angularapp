@@ -10,6 +10,10 @@ export class AppComponent {
 
   data1: string[] = ['banana', 'apple'];
   item: string = '';
-  item2: string = '';
+  item2: string = 'test';
   constructor() {}
+
+  changeItem(item: Event) {
+    this.item = (item?.target as HTMLInputElement).value;
+  }
 }

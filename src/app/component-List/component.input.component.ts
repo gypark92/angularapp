@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-component-input',
@@ -11,8 +11,13 @@ export class ComponentInput {
   @Input()
   item2!: string;
 
+  constructor() {
+    console.log(this.item2);
+  }
+  @Output() Changed = new EventEmitter();
+
+  @Output('ngModelChange')
   onChange(item: Event) {
-    this.item = (item?.target as HTMLInputElement).value;
-    console.log(this.item);
+    this.Changed.emit(item);
   }
 }

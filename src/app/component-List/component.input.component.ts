@@ -11,13 +11,15 @@ export class ComponentInput {
   @Input()
   item2!: string;
 
-  constructor() {
-    console.log(this.item2);
-  }
-  @Output() Changed = new EventEmitter();
+  constructor() {}
 
-  @Output('ngModelChange')
+  @Output() Changed = new EventEmitter();
+  @Output('ngModelChange') update = new EventEmitter();
+
   onChange(item: Event) {
     this.Changed.emit(item);
+  }
+  onUpdate(item2: Event) {
+    this.update.emit(item2);
   }
 }

@@ -6,9 +6,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentList } from './component-List/component-list.component';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
 
 @NgModule({
-  declarations: [AppComponent, ComponentList, ComponentInput],
+  declarations: [AppComponent, ComponentList, ComponentInput, FirstComponent, SecondComponent],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

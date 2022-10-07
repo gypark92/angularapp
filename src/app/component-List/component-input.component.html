@@ -2,5 +2,5 @@
   <form>
     <input type="text" [value]="item" (keyup)="onChange($event)" />
   </form>
-  <input type="text" [(ngModel)]="item2" />
+  <input type="text" [(ngModel)]="item2" (ngModelChange)="onUpdate($event)"/>
 </div>

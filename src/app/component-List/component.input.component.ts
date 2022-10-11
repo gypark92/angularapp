@@ -11,15 +11,22 @@ export class ComponentInput {
   @Input()
   item2!: string;
 
+  item3='';
+
   constructor() {}
 
-  @Output() Changed = new EventEmitter();
-  @Output('ngModelChange') update = new EventEmitter();
+  @Output() changed = new EventEmitter<string>();
+  @Output('item2Change') item2ChangEmitter = new EventEmitter<string>();
+  @Output('item3Change') item3ChangEmitter = new EventEmitter<string>();
 
-  onChange(item: Event) {
-    this.Changed.emit(item);
+  onChange(event?: Event) {
+    const eventValue = (event?.target as HTMLInputElement).value
+    this.changed.emit(eventValue);
   }
-  onUpdate(item2: Event) {
-    this.update.emit(item2);
+  item2Change(item2: string) {
+   this.item2ChangEmitter.emit(item2)
+  }
+  item3Change(){
+    this.item3ChangEmitter.emit(this.item3)
   }
 }

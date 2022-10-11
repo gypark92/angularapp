@@ -11,13 +11,16 @@ export class AppComponent {
   data1: string[] = ['banana', 'apple'];
   item: string = '';
   item2: string = '';
+  log: string = '';
   constructor() {}
 
-  changeItem(item: Event) {
-    this.item = (item?.target as HTMLInputElement).value;
-    console.log(this.item);
+  changeItem(value: string) {
+    this.item = value;
   }
-  updateItem(item2:string) {
+  updateItem2(item2:string) {
  this.item2 = item2
+  }
+  appendText(value: string) {
+    this.log = this.log + value;
   }
 }

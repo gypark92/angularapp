@@ -2,11 +2,15 @@
 <app-component-input
   [item]="item"
   [item2]="item2"
-  (Changed)="changeItem($event)"
-  (ngModelChange)="updateItem($event)"
+  (changed)="changeItem($event)"
+  (item2Change)="updateItem2($event)" 
+  (item3Change)="appendText($event)"
 >
 </app-component-input>
 <div>
   <div>{{ item }}</div>
   <div>{{ item2 }}</div>
+</div>
+<div>
+  {{log}}
 </div>

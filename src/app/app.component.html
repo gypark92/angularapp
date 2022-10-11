@@ -5,12 +5,18 @@
   (changed)="changeItem($event)"
   (item2Change)="updateItem2($event)" 
   (item3Change)="appendText($event)"
+  (clicked)="clickText($event)"
+  (reset)="removeText($event)"
 >
 </app-component-input>
 <div>
   <div>{{ item }}</div>
   <div>{{ item2 }}</div>
+
 </div>
 <div>
   {{log}}
+</div>
+<div>
+  {{val}}
 </div>

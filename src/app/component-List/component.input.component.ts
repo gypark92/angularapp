@@ -13,6 +13,7 @@ export class ComponentInput {
 
   item3='';
 
+  aaa = '';
   constructor() {}
 
   @Output() changed = new EventEmitter<string>();

@@ -1,3 +1,4 @@
+import { registerLocaleData } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
@@ -12,15 +13,18 @@ export class ComponentInput {
   item2!: string;
 
   item3='';
-
-  aaa = '';
+ 
+ 
   constructor() {}
 
   @Output() changed = new EventEmitter<string>();
   @Output('item2Change') item2ChangEmitter = new EventEmitter<string>();
-  @Output('item3Change') item3ChangEmitter = new EventEmitter<string>();
-
+  @Output('item3Change') item3ChangEmitter = new EventEmitter<string>(); 
+  @Output() clicked = new EventEmitter<string>();
+  @Output() reset = new EventEmitter<string>();
+   
   onChange(event?: Event) {
+    
     const eventValue = (event?.target as HTMLInputElement).value
     this.changed.emit(eventValue);
   }
@@ -29,5 +33,10 @@ export class ComponentInput {
   }
   item3Change(){
     this.item3ChangEmitter.emit(this.item3)
+    console.log("tes?")
   }
+  onClick(value:string){   
+   this.clicked.emit(value)
+  }
+  
 }

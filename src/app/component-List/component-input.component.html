@@ -7,11 +7,6 @@
 
    <input type="text" #text /> 
    <button (click)="onClick(text.value)">add </button>
-
-   <button (click)="this.reset.emit(text.value)">reset</button>
-  <input type="reset" (click)="this.reset.emit(text.value)" />
-
-
   
   <!-- <input type="text" [ngModel]="item2" (ngModelChange)="item2Change($event)"/> -->
   <!-- <input type="text" [ngModel]="item2" (ngModelChange)="item2 = $event"/> -->

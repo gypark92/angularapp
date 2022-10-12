@@ -30,10 +30,11 @@ export class AppComponent {
   clickText (value:string){
     this.val = value;
   }
-  removeText(value:string){
+  onRemove(value:string){
     // this.val = value.toUpperCase(); //대문자 
-    
-  this.val =  "";
-  console.log(this.val)
+    console.log(value)
+this.val = "";
   }
+
+  
 }

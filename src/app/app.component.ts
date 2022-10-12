@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { throws } from 'assert';
 
 @Component({
   selector: 'app-root',
@@ -14,27 +13,25 @@ export class AppComponent {
   item: string = '';
   item2: string = '';
   log: string = '';
-
   val: string = '';
 
-
+  date = new Date();
   changeItem(value: string) {
     this.item = value;
   }
-  updateItem2(item2:string) {
- this.item2 = item2
+  updateItem2(item2: string) {
+    this.item2 = item2;
   }
   appendText(value: string) {
     this.log = this.log + value;
   }
-  clickText (value:string){
+  clickText(value: string) {
     this.val = value;
   }
-  onRemove(value:string){
-    // this.val = value.toUpperCase(); //대문자 
-    console.log(value)
-this.val = "";
+  onRemove(value: string) {
+    this.val = '';
   }
-
-  
+  onDate(value: string) {
+    this.date = new Date(value);
+  }
 }

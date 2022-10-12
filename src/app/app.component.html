@@ -3,23 +3,22 @@
   [item]="item"
   [item2]="item2"
   (changed)="changeItem($event)"
-  (item2Change)="updateItem2($event)" 
+  (item2Change)="updateItem2($event)"
   (item3Change)="appendText($event)"
   (clicked)="clickText($event)"
- 
 >
 </app-component-input>
 <div>
   <div>{{ item }}</div>
   <div>{{ item2 }}</div>
-
+  {{ log }}
 </div>
 <div>
-  {{log}}
-</div>
-<div>
-  {{val}}
+  {{ val }}
   <button (click)="onRemove(val)">reset</button>
 </div>
-
- 
+<h4>생일을 입력하세요</h4>
+<app-component-pipe (clicked)="onDate($event)"></app-component-pipe>
+<div>
+  {{ date | date: "yyyy-MM-dd" }}
+</div>

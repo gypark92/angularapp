@@ -6,11 +6,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentList } from './component-List/component-list.component';
-import { FirstComponent } from './first/first.component';
-import { SecondComponent } from './second/second.component';
+import { ComponentPipe } from './component-pipe/component-pipe.component';
 
 @NgModule({
-  declarations: [AppComponent, ComponentList, ComponentInput, FirstComponent, SecondComponent],
+  declarations: [AppComponent, ComponentList, ComponentInput, ComponentPipe],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

@@ -2,12 +2,16 @@
   <form>
     <input type="text" [value]="item" (keyup)="onChange($event)" />
   </form>
-  <input type="text" [(ngModel)]="item2" (ngModelChange)="item2Change($event)"/>
-  <input type="text" [(ngModel)]="item3" (ngModelChange)="item3Change()"/>
+  <input
+    type="text"
+    [(ngModel)]="item2"
+    (ngModelChange)="item2Change($event)"
+  />
+  <input type="text" [(ngModel)]="item3" (ngModelChange)="item3Change()" />
 
-   <input type="text" #text /> 
-   <button (click)="onClick(text.value)">add </button>
-  
+  <input type="text" #text />
+  <button (click)="onClick(text.value)">add</button>
+
   <!-- <input type="text" [ngModel]="item2" (ngModelChange)="item2Change($event)"/> -->
   <!-- <input type="text" [ngModel]="item2" (ngModelChange)="item2 = $event"/> -->
   <!-- <input type="text" [(ngModel)]="item2"/> -->
